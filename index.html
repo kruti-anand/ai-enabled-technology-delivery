@@ -4,11 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AI‑Enabled Technology Delivery | Kruti Anand</title>
+  <title>AI-Enabled Technology Delivery | Kruti Anand</title>
 
   <style>
-    /* Global Reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* =========================
+       GLOBAL RESET
+       ========================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -17,9 +28,17 @@
       line-height: 1.6;
     }
 
-    .container { max-width: 1100px; margin: auto; padding: 0 30px; }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 30px;
+    }
 
-    /* Header */
+
+    /* =========================
+       HEADER / NAVIGATION
+       ========================= */
+
     header {
       background: linear-gradient(180deg, #eef4ff 0%, #ffffff 60%);
       padding: 22px 0;
@@ -29,23 +48,43 @@
       z-index: 10;
     }
 
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
     .brand {
       font-size: 20px;
       font-weight: 700;
       color: #1e1b4b;
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
     }
 
     nav a {
-      margin-left: 25px;
       text-decoration: none;
       color: #4b5563;
       font-size: 14px;
+      font-weight: 500;
     }
 
-    nav a:hover { color: #1e1b4b; }
+    nav a:hover {
+      color: #1e1b4b;
+    }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+       ========================= */
+
     .hero {
       background: linear-gradient(180deg, #eef4ff 0%, #ffffff 60%);
       padding: 110px 0 100px;
@@ -53,13 +92,13 @@
     }
 
     .eyebrow {
-  font-size: 26px;
-  font-weight: 800;
-  color: #1e1b4b;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
+      font-size: 26px;
+      font-weight: 800;
+      color: #1e1b4b;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
 
     .hero h1 {
       font-size: 50px;
@@ -81,10 +120,14 @@
       margin-top: 20px;
     }
 
-    /* Sections */
+
+    /* =========================
+       SECTIONS
+       ========================= */
+
     section {
       padding: 60px 0;
-      scroll-margin-top: 120px; /* ensures heading is visible when clicking tabs */
+      scroll-margin-top: 100px;
     }
 
     section:nth-child(even) {
@@ -96,8 +139,8 @@
       font-weight: 800;
       color: #1e1b4b;
       margin-bottom: 20px;
+      line-height: 1.15;
     }
-
 
     .section-heading p {
       color: #64748b;
@@ -105,7 +148,20 @@
       margin-bottom: 25px;
     }
 
-    /* LIFECYCLE */
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       LIFECYCLE
+       ========================= */
+
     .lifecycle {
       display: flex;
       align-items: center;
@@ -136,6 +192,7 @@
       font-weight: 700;
       color: #1e1b4b;
       margin-bottom: 10px;
+      display: block;
     }
 
     .lifecycle-stage h3 {
@@ -150,7 +207,20 @@
       font-weight: 600;
     }
 
-    /* Delivery Cards */
+    .section-supporting-text {
+      max-width: 800px;
+      margin: 40px auto 0;
+      text-align: center;
+      color: #64748b;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       TECHNOLOGY DELIVERY
+       ========================= */
+
     .delivery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -176,15 +246,25 @@
       font-size: 22px;
       font-weight: 800;
       color: #1e1b4b;
+      display: block;
     }
 
     .delivery-card ul {
       margin-top: 15px;
+      padding-left: 20px;
       color: #64748b;
       line-height: 1.55;
     }
 
-    /* AI Enablement */
+    .delivery-card li {
+      margin-bottom: 7px;
+    }
+
+
+    /* =========================
+       AI ENABLEMENT
+       ========================= */
+
     .capability-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -213,48 +293,48 @@
       font-weight: 700;
     }
 
-    .capability-card p { color: #64748b; }
-
-    /* Proof of Concept */
-    .discovery-flow {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin: 40px 0;
-    }
-
-    .discovery-step {
-      background: linear-gradient(180deg, #eef4ff 0%, #ffffff 60%);
-      border: 1px solid #dbe4ff;
-      border-radius: 8px;
-      padding: 20px;
-      width: 260px;
-      text-align: center;
-    }
-
-    .discovery-step h3 {
-      color: #1e1b4b;
-      margin-top: 10px;
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    .discovery-connector {
-      font-size: 24px;
+    .capability-card p {
       color: #64748b;
     }
 
-    /* Closing */
+    .governance-statement {
+      max-width: 800px;
+      margin: 45px auto 0;
+      padding: 25px 30px;
+      border-top: 1px solid #dbe4ff;
+      border-bottom: 1px solid #dbe4ff;
+      text-align: center;
+    }
+
+    .governance-statement p {
+      color: #1e1b4b;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       CLOSING
+       ========================= */
+
+    .closing-section {
+      background: #ffffff;
+    }
+
     .closing-section p {
       color: #64748b;
       font-size: 18px;
       max-width: 800px;
       margin: auto;
       text-align: center;
+      line-height: 1.7;
     }
 
-    /* Footer */
+
+    /* =========================
+       FOOTER
+       ========================= */
+
     footer {
       background: #1e1b4b;
       color: #94a3b8;
@@ -263,273 +343,495 @@
       font-size: 13px;
     }
 
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .capability-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lifecycle {
+        gap: 20px;
+      }
+
+      .lifecycle-stage {
+        width: 170px;
+      }
+    }
+
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 80px 0 70px;
+      }
+
+      .eyebrow {
+        font-size: 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero-subheadline {
+        font-size: 18px;
+      }
+
+      .section-heading h2 {
+        font-size: 34px;
+      }
+
+      .lifecycle {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .lifecycle-item {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .lifecycle-stage {
+        width: 260px;
+      }
+
+      .lifecycle-arrow {
+        transform: rotate(90deg);
+      }
+
+      .capability-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#" class="brand">Kruti Anand</a>
+  <!-- =========================
+       HEADER
+       ========================= -->
 
-    <!-- ⭐ FIXED NAVIGATION -->
-    <nav class="main-nav">
-      <a href="/docs/#lifecycle">Lifecycle</a>
-      <a href="/docs/#delivery">Delivery</a>
-      <a href="/docs/#ai-enablement">AI Enablement</a>
-      <a href="/docs/#proof-of-concept">Proof of Concept</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
 
-<main>
+      <a href="#" class="brand">Kruti Anand</a>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-content">
-      <p class="eyebrow">AI‑ENABLED TECHNOLOGY DELIVERY</p>
-
-      <h1>Move from business intent to delivery with greater clarity.</h1>
-
-      <p class="hero-subheadline">
-        A practical framework for applying AI across the technology
-        delivery lifecycle—strengthening planning, governance, risk
-        visibility, and execution while keeping people accountable
-        for decisions.
-      </p>
-
-      <p class="hero-principle">
-        <strong>AI accelerates the work. People own the decisions.</strong>
-      </p>
-    </div>
-  </section>
-
-  <!-- LIFECYCLE -->
-  <section id="lifecycle" class="section lifecycle-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="eyebrow">THE DELIVERY LIFECYCLE</p>
-        <h2>From intent to outcomes</h2>
-      </div>
-
-      <div class="lifecycle">
-
-        <div class="lifecycle-item">
-          <div class="lifecycle-stage">
-            <span class="stage-number">01</span>
-            <h3>Business Intent</h3>
-          </div>
-          <div class="lifecycle-arrow">→</div>
-        </div>
-
-        <div class="lifecycle-item">
-          <div class="lifecycle-stage">
-            <span class="stage-number">02</span>
-            <h3>Requirements & Discovery</h3>
-          </div>
-          <div class="lifecycle-arrow">→</div>
-        </div>
-
-        <div class="lifecycle-item">
-          <div class="lifecycle-stage">
-            <span class="stage-number">03</span>
-            <h3>Solution Design</h3>
-          </div>
-          <div class="lifecycle-arrow">→</div>
-        </div>
-
-        <div class="lifecycle-item">
-          <div class="lifecycle-stage">
-            <span class="stage-number">04</span>
-            <h3>Delivery Planning</h3>
-          </div>
-          <div class="lifecycle-arrow">→</div>
-        </div>
-
-        <div class="lifecycle-item">
-          <div class="lifecycle-stage">
-            <span class="stage-number">05</span>
-            <h3>Execution & Governance</h3>
-          </div>
-          <div class="lifecycle-arrow">→</div>
-        </div>
-
-        <div class="lifecycle-item">
-          <div class="lifecycle-stage">
-            <span class="stage-number">06</span>
-            <h3>Release & Outcomes</h3>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="section-supporting-text" style="
-        max-width: 800px;
-        margin: 40px auto 0;
-        text-align: center;
-        color: #64748b;
-        font-size: 18px;
-        line-height: 1.7;
-      ">
-        AI can support each stage by accelerating analysis, documentation, synthesis, and visibility—
-        while human judgment remains central to validation, prioritization, and decision-making.
-      </p>
+      <nav class="main-nav">
+        <a href="#lifecycle">Lifecycle</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#ai-enablement">AI Enablement</a>
+      </nav>
 
     </div>
-  </section>
+  </header>
 
-  <!-- DELIVERY -->
-  <section id="delivery" class="section delivery-section">
-    <div class="container">
 
-      <div class="section-heading">
-        <p class="eyebrow">TECHNOLOGY DELIVERY</p>
-        <h2>What I consider across the delivery lifecycle</h2>
+  <main>
 
-        <p class="section-intro">
-          Effective technology delivery requires more than tracking
-          work. It requires continuous visibility into outcomes,
-          dependencies, risks, decisions, readiness, and alignment
-          from planning through release.
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <section class="hero">
+
+      <div class="container hero-content">
+
+        <p class="eyebrow">AI-ENABLED TECHNOLOGY DELIVERY</p>
+
+        <h1>
+          Move from business intent to delivery with greater clarity.
+        </h1>
+
+        <p class="hero-subheadline">
+          A practical framework for applying AI across the technology
+          delivery lifecycle—strengthening planning, governance, risk
+          visibility, and execution while keeping people accountable
+          for decisions.
         </p>
-      </div>
 
-      <div class="delivery-grid">
-
-        <article class="delivery-card">
-          <div class="card-header">
-            <span class="card-label">01</span>
-            <h3>PLAN</h3>
-          </div>
-
-          <ul>
-            <li>Business outcomes &amp; scope</li>
-            <li>Requirements &amp; assumptions</li>
-            <li>Risks &amp; dependencies</li>
-            <li>Architecture &amp; technical considerations</li>
-            <li>Capacity &amp; sequencing</li>
-            <li>Delivery readiness</li>
-            <li>Governance &amp; decision ownership</li>
-          </ul>
-        </article>
-
-        <article class="delivery-card">
-          <div class="card-header">
-            <span class="card-label">02</span>
-            <h3>EXECUTE</h3>
-          </div>
-
-          <ul>
-            <li>Progress &amp; predictability</li>
-            <li>Cross-team dependencies</li>
-            <li>Risks, issues &amp; blockers</li>
-            <li>Decisions &amp; escalations</li>
-            <li>Quality &amp; testing readiness</li>
-            <li>Stakeholder alignment</li>
-            <li>Change management</li>
-          </ul>
-        </article>
-
-        <article class="delivery-card">
-          <div class="card-header">
-            <span class="card-label">03</span>
-            <h3>DELIVER</h3>
-          </div>
-
-          <ul>
-            <li>Release readiness</li>
-            <li>Business / technical / operational readiness</li>
-            <li>Traceability to original intent</li>
-            <li>Outcome measurement</li>
-            <li>Production feedback</li>
-            <li>Lessons learned</li>
-            <li>Continuous improvement</li>
-          </ul>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- AI ENABLEMENT -->
-  <section id="ai-enablement" class="section ai-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="eyebrow">AI ENABLEMENT</p>
-        <h2>Where AI can strengthen delivery</h2>
-
-        <p class="section-intro">
-          AI can augment delivery practices by reducing manual effort,
-          improving visibility, and helping teams work with more
-          structured information.
+        <p class="hero-principle">
+          <strong>AI accelerates the work. People own the decisions.</strong>
         </p>
-      </div>
-
-           <div class="capability-grid">
-
-        <article class="capability-card">
-          <span class="capability-number">01</span>
-          <h3>Identify</h3>
-          <p>Surface risks, dependencies, assumptions, and unresolved decisions earlier.</p>
-        </article>
-
-        <article class="capability-card">
-          <span class="capability-number">02</span>
-          <h3>Structure</h3>
-          <p>Turn ambiguous information into organized delivery artifacts.</p>
-        </article>
-
-        <article class="capability-card">
-          <span class="capability-number">03</span>
-          <h3>Synthesize</h3>
-          <p>Reduce manual effort across planning, status, documentation, and governance.</p>
-        </article>
-
-        <article class="capability-card">
-          <span class="capability-number">04</span>
-          <h3>Trace</h3>
-          <p>Maintain visibility from business intent through solution, execution, and outcomes.</p>
-        </article>
 
       </div>
 
-      <div class="governance-statement">
+    </section>
+
+
+    <!-- =========================
+         LIFECYCLE
+         ========================= -->
+
+    <section id="lifecycle" class="section lifecycle-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">THE DELIVERY LIFECYCLE</p>
+
+          <h2>From intent to outcomes</h2>
+
+        </div>
+
+
+        <div class="lifecycle">
+
+          <div class="lifecycle-item">
+
+            <div class="lifecycle-stage">
+              <span class="stage-number">01</span>
+              <h3>Business Intent</h3>
+            </div>
+
+            <div class="lifecycle-arrow">→</div>
+
+          </div>
+
+
+          <div class="lifecycle-item">
+
+            <div class="lifecycle-stage">
+              <span class="stage-number">02</span>
+              <h3>Requirements &amp; Discovery</h3>
+            </div>
+
+            <div class="lifecycle-arrow">→</div>
+
+          </div>
+
+
+          <div class="lifecycle-item">
+
+            <div class="lifecycle-stage">
+              <span class="stage-number">03</span>
+              <h3>Solution Design</h3>
+            </div>
+
+            <div class="lifecycle-arrow">→</div>
+
+          </div>
+
+
+          <div class="lifecycle-item">
+
+            <div class="lifecycle-stage">
+              <span class="stage-number">04</span>
+              <h3>Delivery Planning</h3>
+            </div>
+
+            <div class="lifecycle-arrow">→</div>
+
+          </div>
+
+
+          <div class="lifecycle-item">
+
+            <div class="lifecycle-stage">
+              <span class="stage-number">05</span>
+              <h3>Execution &amp; Governance</h3>
+            </div>
+
+            <div class="lifecycle-arrow">→</div>
+
+          </div>
+
+
+          <div class="lifecycle-item">
+
+            <div class="lifecycle-stage">
+              <span class="stage-number">06</span>
+              <h3>Release &amp; Outcomes</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <p class="section-supporting-text">
+          AI can support each stage by accelerating analysis,
+          documentation, synthesis, and visibility—while human
+          judgment remains central to validation, prioritization,
+          and decision-making.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TECHNOLOGY DELIVERY
+         ========================= -->
+
+    <section id="delivery" class="section delivery-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">TECHNOLOGY DELIVERY</p>
+
+          <h2>What I consider across the delivery lifecycle</h2>
+
+          <p class="section-intro">
+            Effective technology delivery requires more than tracking
+            work. It requires continuous visibility into outcomes,
+            dependencies, risks, decisions, readiness, and alignment
+            from planning through release.
+          </p>
+
+        </div>
+
+
+        <div class="delivery-grid">
+
+          <!-- PLAN -->
+
+          <article class="delivery-card">
+
+            <div class="card-header">
+              <span class="card-label">01</span>
+              <h3>PLAN</h3>
+            </div>
+
+            <ul>
+              <li>Business outcomes &amp; scope</li>
+              <li>Requirements &amp; assumptions</li>
+              <li>Risks &amp; dependencies</li>
+              <li>Architecture &amp; technical considerations</li>
+              <li>Capacity &amp; sequencing</li>
+              <li>Delivery readiness</li>
+              <li>Governance &amp; decision ownership</li>
+            </ul>
+
+          </article>
+
+
+          <!-- EXECUTE -->
+
+          <article class="delivery-card">
+
+            <div class="card-header">
+              <span class="card-label">02</span>
+              <h3>EXECUTE</h3>
+            </div>
+
+            <ul>
+              <li>Progress &amp; predictability</li>
+              <li>Cross-team dependencies</li>
+              <li>Risks, issues &amp; blockers</li>
+              <li>Decisions &amp; escalations</li>
+              <li>Quality &amp; testing readiness</li>
+              <li>Stakeholder alignment</li>
+              <li>Change management</li>
+            </ul>
+
+          </article>
+
+
+          <!-- DELIVER -->
+
+          <article class="delivery-card">
+
+            <div class="card-header">
+              <span class="card-label">03</span>
+              <h3>DELIVER</h3>
+            </div>
+
+            <ul>
+              <li>Release readiness</li>
+              <li>Business / technical / operational readiness</li>
+              <li>Traceability to original intent</li>
+              <li>Outcome measurement</li>
+              <li>Production feedback</li>
+              <li>Lessons learned</li>
+              <li>Continuous improvement</li>
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AI ENABLEMENT
+         ========================= -->
+
+    <section id="ai-enablement" class="section ai-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">AI ENABLEMENT</p>
+
+          <h2>Where AI can strengthen delivery</h2>
+
+          <p class="section-intro">
+            AI can augment delivery practices by reducing manual effort,
+            improving visibility, and helping teams work with more
+            structured information.
+          </p>
+
+        </div>
+
+
+        <div class="capability-grid">
+
+          <!-- STRUCTURE -->
+
+          <article class="capability-card">
+
+            <span class="capability-number">01</span>
+
+            <h3>Structure</h3>
+
+            <p>
+              Turn ambiguous information into organized delivery artifacts.
+            </p>
+
+          </article>
+
+
+          <!-- SURFACE -->
+
+          <article class="capability-card">
+
+            <span class="capability-number">02</span>
+
+            <h3>Surface</h3>
+
+            <p>
+              Identify gaps, risks, dependencies, assumptions, and unresolved decisions earlier.
+            </p>
+
+          </article>
+
+
+          <!-- SYNTHESIZE -->
+
+          <article class="capability-card">
+
+            <span class="capability-number">03</span>
+
+            <h3>Synthesize</h3>
+
+            <p>
+              Reduce manual effort across planning, status, documentation, and governance.
+            </p>
+
+          </article>
+
+
+          <!-- CONNECT -->
+
+          <article class="capability-card">
+
+            <span class="capability-number">04</span>
+
+            <h3>Connect</h3>
+
+            <p>
+              Improve traceability from business intent through solution and execution.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="governance-statement">
+
+          <p>
+            <strong>
+              AI assists with analysis and acceleration.
+              Humans remain accountable for validation,
+              prioritization, approvals, and delivery decisions.
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CLOSING
+         ========================= -->
+
+    <section class="closing-section">
+
+      <div class="container">
+
         <p>
           <strong>
-            AI assists with analysis and acceleration.
-            Humans remain accountable for validation,
-            prioritization, approvals, and delivery decisions.
+            The objective isn't to automate delivery decisions.
+            It's to give delivery teams better information,
+            earlier visibility, and more time to focus on
+            the decisions that matter.
           </strong>
         </p>
+
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <!-- CLOSING -->
-<section class="closing-section">
-  <div class="container">
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
 
     <p>
-      <strong>
-        The objective isn't to automate delivery decisions.
-        It's to give delivery teams better information,
-        earlier visibility, and more time to focus on
-        the decisions that matter.
-      </strong>
+      © 2026 Kruti Anand · AI-Enabled Technology Delivery
     </p>
 
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <p>© 2026 Kruti Anand · AI-Enabled Technology Delivery</p>
-</footer>
+  </footer>
 
 </body>
 </html>
