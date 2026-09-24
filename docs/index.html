@@ -92,6 +92,7 @@
     /* Sections */
     section {
       padding: 60px 0;
+      scroll-margin-top: 120px; /* FIX: headings visible when clicking tabs */
     }
 
     section:nth-child(even) {
@@ -99,8 +100,9 @@
     }
 
     .section-heading h2 {
-      font-size: 32px;
-      color: #1e1b4b;
+      font-size: 38px;          /* Bigger */
+      font-weight: 800;         /* Bolder */
+      color: #1e1b4b;           /* Darker */
       margin-bottom: 20px;
     }
 
@@ -110,7 +112,7 @@
       margin-bottom: 25px;
     }
 
-    /* FIXED LIFECYCLE ALIGNMENT */
+    /* LIFECYCLE */
     .lifecycle {
       display: flex;
       align-items: center;
@@ -173,11 +175,13 @@
     .card-header h3 {
       color: #1e1b4b;
       margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: 700;
     }
 
     .card-label {
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 22px;
+      font-weight: 800;
       color: #1e1b4b;
     }
 
@@ -204,14 +208,16 @@
     }
 
     .capability-number {
-      font-size: 22px;
-      font-weight: 700;
+      font-size: 24px;
+      font-weight: 800;
       color: #1e1b4b;
     }
 
     .capability-card h3 {
       color: #1e1b4b;
       margin: 10px 0;
+      font-size: 20px;
+      font-weight: 700;
     }
 
     .capability-card p {
@@ -239,6 +245,8 @@
     .discovery-step h3 {
       color: #1e1b4b;
       margin-top: 10px;
+      font-size: 20px;
+      font-weight: 700;
     }
 
     .discovery-connector {
@@ -274,10 +282,10 @@
     <a href="#" class="brand">Kruti Anand</a>
 
     <nav class="main-nav">
-      <a href="#lifecycle">Lifecycle</a>
-      <a href="#delivery">Delivery</a>
-      <a href="#ai-enablement">AI Enablement</a>
-      <a href="#proof-of-concept">Proof of Concept</a>
+      <a href="/ai-enabled-technology-delivery/#lifecycle">Lifecycle</a>
+      <a href="/ai-enabled-technology-delivery/#delivery">Delivery</a>
+      <a href="/ai-enabled-technology-delivery/#ai-enablement">AI Enablement</a>
+      <a href="/ai-enabled-technology-delivery/#proof-of-concept">Proof of Concept</a>
     </nav>
   </div>
 </header>
@@ -576,29 +584,3 @@
           requirements gathering, business analysis, architecture
           review, or stakeholder validation. Outputs require human
           review before being used for delivery.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CLOSING -->
-  <section class="closing-section">
-    <div class="container">
-      <div class="closing-content">
-        <p>
-          The objective isn't to automate delivery decisions.
-          It's to give delivery teams better information, earlier
-          visibility, and more time to focus on the decisions
-          that matter.
-        </p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>AI‑Enabled Technology Delivery</p>
-    <p>
