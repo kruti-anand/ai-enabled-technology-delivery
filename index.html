@@ -311,7 +311,75 @@
       font-size: 17px;
       line-height: 1.7;
     }
+    
+ /*=========================
+   AI WORKFLOWS & MEASURABLE EFFICIENCY
+   ========================= */
 
+.workflow-section {
+  margin-top: 55px;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.workflow-card {
+  background: #ffffff;
+  border: 1px solid #dbe4ff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(30, 27, 75, 0.04);
+}
+
+.workflow-card h3 {
+  color: #1e1b4b;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.workflow-card p {
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.efficiency-section {
+  background: #eef4ff;
+}
+
+.efficiency-card {
+  max-width: 800px;
+  margin: 30px auto 0;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #dbe4ff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(30, 27, 75, 0.05);
+}
+
+.efficiency-number {
+  display: block;
+  color: #1e1b4b;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.efficiency-card p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.efficiency-card .metric-note {
+  font-size: 14px;
+  margin-bottom: 0;
+}
 
     /* =========================
        CLOSING
@@ -373,6 +441,17 @@
 
 
     @media (max-width: 650px) {
+      .workflow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .efficiency-card {
+        padding: 25px 20px;
+      }
+
+      .efficiency-number {
+        font-size: 32px;
+      }
 
       .container {
         padding: 0 20px;
@@ -784,22 +863,101 @@
           </article>
 
         </div>
+<div class="workflow-section">
 
+  <div class="section-heading">
+    <p class="eyebrow">PRACTICAL APPLICATION</p>
+    <h2>AI workflows I developed</h2>
+    <p class="section-intro">
+      These workflows apply AI to specific delivery activities, with outputs
+      reviewed and validated by the people responsible for the work.
+    </p>
+  </div>
+
+  <div class="workflow-grid">
+
+    <article class="workflow-card">
+      <h3>Requirements Clarity — BRD Builder</h3>
+      <p>
+        A Custom GPT-based workflow that uses the 5 Ws to structure
+        business intent and support clearer requirements.
+      </p>
+    </article>
+
+    <article class="workflow-card">
+      <h3>Solution Analysis — SDD Builder</h3>
+      <p>
+        An AI-assisted workflow that structures solution considerations,
+        dependencies, and downstream impact analysis.
+      </p>
+    </article>
+
+    <article class="workflow-card">
+      <h3>Story Readiness — Readiness Assessment</h3>
+      <p>
+        An AI-assisted workflow that evaluates stories against the
+        Definition of Ready and highlights gaps requiring clarification.
+      </p>
+    </article>
+
+    <article class="workflow-card">
+      <h3>Planning Preparation — PI Planning Deck Generator</h3>
+      <p>
+        A workflow I developed to reduce the manual effort involved
+        in preparing PI Planning materials.
+      </p>
+    </article>
+
+    <article class="workflow-card">
+      <h3>Capacity Planning — Resource Planner Generator</h3>
+      <p>
+        A workflow that prepares resource-planning information using
+        working days in the PI calendar and planned vacations for each resource.
+      </p>
+    </article>
+
+  </div>
+
+</div>
 
         <div class="governance-statement">
 
           <p>
             <strong>
-              AI assists with analysis and acceleration.
-              Humans remain accountable for validation,
-              prioritization, approvals, and delivery decisions.
+              AI assists with analysis, preparation, and visibility.
+              People remain accountable for validation, prioritization,
+              approvals, and delivery decisions.
             </strong>
           </p>
 
         </div>
 
       </div>
+<section class="efficiency-section">
+  <div class="container">
 
+    <div class="section-heading">
+      <p class="eyebrow">MEASURABLE EFFICIENCY</p>
+      <h2>Reducing manual preparation effort</h2>
+    </div>
+
+    <div class="efficiency-card">
+      <span class="efficiency-number">50% less preparation effort</span>
+
+      <p>
+        Reduced the combined preparation time for the PI Planning deck
+        and resource planner from approximately three days to 1.5 days
+        by developing AI-assisted generators for both artifacts.
+      </p>
+
+      <p class="metric-note">
+        This measures preparation effort for these two deliverables—not
+        a 50% improvement in team productivity or overall program delivery.
+      </p>
+    </div>
+
+  </div>
+</section>
     
     <!-- =========================
          CLOSING & BACK TO PORTFOLIO
@@ -810,10 +968,9 @@
 
         <p>
           <strong>
-            The objective isn't to automate delivery decisions.
-            It's to give delivery teams better information,
-            earlier visibility, and more time to focus on
-            the decisions that matter.
+           The objective is to give delivery teams better information earlier,
+           reduce avoidable manual effort, and create more time for the decisions
+           that matter. AI accelerates the work. People own the decisions.
           </strong>
         </p>
 
