@@ -130,9 +130,13 @@
       scroll-margin-top: 100px;
     }
 
-    section:nth-child(even) {
-      background: linear-gradient(180deg, #eef4ff 0%, #ffffff 60%);
-    }
+    section:nth-child(even):not(.efficiency-section) {
+  background: linear-gradient(180deg, #eef4ff 0%, #ffffff 60%);
+}
+
+.efficiency-section {
+  background: #eef4ff;
+}
 
     .section-heading h2 {
       font-size: 42px;
@@ -930,10 +934,16 @@
             </strong>
           </p>
 
-        </div>
+                </div>
 
       </div>
-<section class="efficiency-section">
+    </section>
+
+    <!-- =========================
+         MEASURABLE EFFICIENCY
+         ========================= -->
+
+    <section class="efficiency-section">
   <div class="container">
 
     <div class="section-heading">
@@ -942,19 +952,19 @@
     </div>
 
     <div class="efficiency-card">
-      <span class="efficiency-number">50% less preparation effort</span>
+  <span class="efficiency-number">50% less preparation effort</span>
 
-      <p>
-        Reduced the combined preparation time for the PI Planning deck
-        and resource planner from approximately three days to 1.5 days
-        by developing AI-assisted generators for both artifacts.
-      </p>
+  <p>
+    Cut my combined preparation time for the PI Planning deck and
+    resource planner from approximately three days to 1.5 days by
+    developing AI-assisted generators for both artifacts.
+  </p>
 
-      <p class="metric-note">
-        This measures preparation effort for these two deliverables—not
-        a 50% improvement in team productivity or overall program delivery.
-      </p>
-    </div>
+  <p class="metric-note">
+    Measures my preparation effort for these two deliverables—not
+    team productivity or overall program delivery performance.
+  </p>
+</div>
 
   </div>
 </section>
