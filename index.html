@@ -308,7 +308,18 @@
    ========================= */
 
 .workflow-section {
-  margin-top: 55px;
+  margin-top: 65px;
+  padding-top: 35px;
+  border-top: 1px solid #dbe4ff;
+}
+
+.workflow-section .section-heading h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.workflow-section .section-heading .eyebrow {
+  font-size: 15px;
 }
 
 .workflow-grid {
@@ -324,6 +335,12 @@
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 2px 6px rgba(30, 27, 75, 0.04);
+}
+    
+.workflow-card:last-child {
+  grid-column: 1 / -1;
+  width: calc(50% - 11px);
+  justify-self: center;
 }
 
 .workflow-card h3 {
@@ -470,28 +487,34 @@
 
        .workflow-principle {
           max-width: 760px;
-          margin: 30px auto 0;
-          padding: 24px 0 0;
+          margin: 35px auto 0;
+          padding: 25px 0 0;
           border-top: 1px solid #dbe4ff;
           text-align: center;
       }
 
         .workflow-principle p {
           margin: 0 auto 16px;
-          color: #64748b;
           font-size: 15px;
           line-height: 1.7;
       }
 
         .workflow-principle .governance-message {
-          color: #1e1b4b;
-          font-size: 16px;
+          color: #1e1b4b;          
      }
 
         .workflow-principle .workflow-outcome {
+          color: #64748b;
+          font-weight: 400;
           margin-bottom: 0;
      }
+
+         .workflow-card:last-child {
+            grid-column: auto;
+            width: 100%;
     }
+    }
+    
 
   </style>
 </head>
@@ -892,13 +915,8 @@
      </div><!-- end workflow-grid -->
 
   
-<div class="workflow-principle">
-  <p>
-    These workflows strengthen delivery—not replace delivery judgment.
-    They structure information, surface gaps, and reduce preparation effort
-    so teams can focus on validation, trade-offs, dependencies, and decisions.
-  </p>
 
+<div class="workflow-principle">
   <p class="governance-message">
     <strong>
       AI assists with analysis, preparation, and visibility.
@@ -910,7 +928,7 @@
   <p class="workflow-outcome">
     The result: better-prepared delivery artifacts, earlier visibility
     into gaps and dependencies, and more time for the decisions that matter.
-   </p>
+  </p>
 </div>
   </div>
   </div>
