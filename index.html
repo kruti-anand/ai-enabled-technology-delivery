@@ -132,7 +132,7 @@
 
     section:nth-child(even):not(.efficiency-section) {
       background: linear-gradient(180deg, #eef4ff 0%, #ffffff 60%);
-}
+    }
 
     .section-heading h2 {
       font-size: 42px;
@@ -349,6 +349,7 @@
 .efficiency-section {
   background: #eef4ff;
 }
+    
 .workflow-principle {
   max-width: 850px;
   margin: 30px auto 0;
@@ -360,6 +361,7 @@
   font-size: 16px;
   line-height: 1.7;
 }
+    
 .efficiency-card {
   max-width: 800px;
   margin: 30px auto 0;
@@ -389,6 +391,14 @@
 .efficiency-card .metric-note {
   font-size: 14px;
   margin-bottom: 0;
+}
+
+.efficiency-section .section-heading {
+  text-align: center;
+}
+
+.efficiency-section .section-heading h2 {
+  margin-bottom: 12px;
 }
 
     /* =========================
@@ -450,9 +460,13 @@
     }
 
 
-    @media (max-width: 650px) {
+   @media (max-width: 650px) {
       .workflow-grid {
         grid-template-columns: 1fr;
+      }
+    
+      section {
+        scroll-margin-top: 150px;
       }
 
       .efficiency-card {
@@ -959,7 +973,7 @@
 
     
 <div class="efficiency-card">
-  <span class="efficiency-number">50% reduction in my preparation effort</span>
+  <span class="efficiency-number">50% less preparation time</span>
 
   <p>
     I reduced the combined preparation time for the PI Planning deck
